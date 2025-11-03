@@ -134,7 +134,7 @@ export default function AdminDashboard() {
   const handleApproveRegistration = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`https://teacherforstudent-beryl.vercel.app/api/admin/pending-registrations/${id}/approve`, {
+      const res = await fetch(`https://stu-teacher-1.onrender.com/api/admin/pending-registrations/${id}/approve`, {
         method: "PATCH",
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
       });
@@ -148,7 +148,7 @@ export default function AdminDashboard() {
  const handleRejectRegistration = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`https://teacherforstudent-beryl.vercel.app/api/admin/pending-registrations/${id}/reject`, {
+      const res = await fetch(`https://stu-teacher-1.onrender.com/api/admin/pending-registrations/${id}/reject`, {
         method: "PATCH",
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
       });
@@ -162,7 +162,7 @@ export default function AdminDashboard() {
  const handleDeleteTeacher = async (teacherId) => {
   try {
     const token = localStorage.getItem("token")
-   const res = await fetch(`https://teacherforstudent-beryl.vercel.app/api/admin/teachers/${teacherId}`, {
+   const res = await fetch(`https://stu-teacher-1.onrender.com/api/admin/teachers/${teacherId}`, {
   method: "DELETE",
   headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
 })
@@ -182,7 +182,7 @@ export default function AdminDashboard() {
 const handleUpdateTeacher = async (teacherId, updatedData) => {
   try {
     const token = localStorage.getItem("token")
-    const res = await fetch(`https://teacherforstudent-beryl.vercel.app/api/admin/teachers/${teacherId}`, {
+    const res = await fetch(`https://stu-teacher-1.onrender.com/api/admin/teachers/${teacherId}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,

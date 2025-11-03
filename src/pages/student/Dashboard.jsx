@@ -50,7 +50,7 @@ useEffect(() => {
 
       // ✅ Fetch appointments + messages
       const res = await fetch(
-        "https://teacherforstudent-beryl.vercel.app/api/students/appointments",
+        "https://stu-teacher-1.onrender.com/api/students/appointments",
         {
           method: "GET",
           headers: {
@@ -73,7 +73,7 @@ useEffect(() => {
 
       // ✅ Fetch teachers
       const resTeachers = await fetch(
-        "https://teacherforstudent-beryl.vercel.app/api/teachers",
+        "https://stu-teacher-1.onrender.com/api/teachers",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
